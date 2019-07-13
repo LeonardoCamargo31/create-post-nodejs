@@ -1,0 +1,14 @@
+
+<% if(errors){ %>
+    <ul>
+    <% errors.forEach(error =>{ %>
+        <li><%= error.message %></li>
+    <% }) %>
+    </ul>
+<% } %>
+
+<form action="/post" method="POST">
+    <input type="text" name="name"/>
+    <textarea name="description"></textarea>
+    <button type="submit">Enviar</button>
+</form>
